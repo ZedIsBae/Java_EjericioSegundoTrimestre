@@ -46,7 +46,32 @@ public class EjemplosConsola {
         return listaMaximos;
     }    
     
-        
+        private boolean palindromo(String cadena){
+          //primera fase: creo nuevo string que sea una copia de la anterior pero quitandole los espacios en blanco
+          String auxiliar = "";
+          for (int i=0; i< cadena.length();i++){
+              if (cadena.charAt(i) !=' '){
+                  auxiliar = auxiliar + cadena.charAt(i);
+          }
+          }
+          //ahora en auxiliar tengo el string pero sin espacios en blanco
+          //declaro dos indices para que digan que posiciones estoy comparando
+          int indiceIzq = 0;
+          int indiceDer = auxiliar.length()-1;
+          //mientras sean iguales los caracteres en esa posiciones la palabra sera un palindromo
+          //en el momento en el que una de esas comparaciones falte, es que no es palindromo
+          
+          //ademas, si el izquierdo es mayor que el derecho, ya he chequeado toda la frase
+          while (auxiliar.charAt(indiceIzq)== auxiliar.charAt(indiceDer)&& indiceIzq<=indiceDer){
+              indiceIzq++;
+              indiceDer--;
+          }
+          boolean esPalindromo = true;
+          if(indiceIzq < indiceDer){ // Si esto se cumple es que la palabra no es un palindromo
+              esPalindromo = false;
+          }
+            return esPalindromo; 
+        }
     
     
     
@@ -59,7 +84,9 @@ public class EjemplosConsola {
         EjemplosConsola ejericicios = new EjemplosConsola();
         System.out.println( ejericicios.listaNumeros[2]);
         System.out.println(Arrays.toString( ejericicios.maximos(ejericicios.listaNumeros)));
-        
+        System.out.println( ejericicios.palindromo("ACASO HUBO BUHOS ACA"));
+         System.out.println( ejericicios.palindromo("wadhnawkjdka dwad dad"));
+          System.out.println( ejericicios.palindromo("TACOCAT"));
         //declaro un array de int´s de instancia
  /*si quisiese ponerlo dentro neceistaria lo siguiente:
             int[]  listaNumeros	={50,31,27,2,5,99};
