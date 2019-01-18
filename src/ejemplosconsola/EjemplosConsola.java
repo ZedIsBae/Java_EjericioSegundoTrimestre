@@ -12,7 +12,7 @@ import java.util.Arrays;
  */
 public class EjemplosConsola {
         //declaro un array de int´s de instancia
-    int[]  listaNumeros	={1,2,3,4,5,};   
+    int[]  listaNumeros	={-1,-1,-3,-4,-5,};   
    
     /*
     El metodo maximos va a calcular el maximo y el segundo maximo de una lista de numeros
@@ -21,13 +21,13 @@ public class EjemplosConsola {
         //declaramos un array de dos elementos para guardar el maximo y el segundo maximo
         //lenght devuelve el numero de elementos que contiene ese array
         int[] listaMaximos = {lista [0],lista [1]};
-        for (int i=0; i< lista.length; i++){
+        for (int i=1; i< lista.length; i++){
             if(listaMaximos[0] <= lista[i]){  
                 // Si llega aqui es que el numero que estoy comparando es mayor o igual 
                 // que el que tengo en lalista de maximo
-               if(i!=0){
+             //  if(i!=0){
                 listaMaximos[1] = listaMaximos[0]; // desplazo derecha el que habia como maximo
-               }
+             //  }
                 listaMaximos[0] = lista[i]; //Pongo en la primera posición al nuevo maximo
                 
             }
@@ -45,6 +45,13 @@ public class EjemplosConsola {
         
         return listaMaximos;
     }    
+    
+        
+    
+    
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -59,5 +66,5 @@ public class EjemplosConsola {
             System.out.println( listaNumeros[2]);
 */
         ejericicios.maximos(ejericicios.listaNumeros);   
-   } 
+   }     
 }
