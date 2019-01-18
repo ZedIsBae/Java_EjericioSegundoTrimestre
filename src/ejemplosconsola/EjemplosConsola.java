@@ -69,6 +69,10 @@ public class EjemplosConsola {
           boolean esPalindromo = true;
           if(indiceIzq < indiceDer){ // Si esto se cumple es que la palabra no es un palindromo
               esPalindromo = false;
+              System.out.println("No es Un Palindromo");
+          }
+          else{
+               System.out.println("Si es un palindromo");
           }
             return esPalindromo; 
         }
@@ -85,8 +89,8 @@ public class EjemplosConsola {
         System.out.println( ejericicios.listaNumeros[2]);
         System.out.println(Arrays.toString( ejericicios.maximos(ejericicios.listaNumeros)));
         System.out.println( ejericicios.palindromo("ACASO HUBO BUHOS ACA"));
-         System.out.println( ejericicios.palindromo("wadhnawkjdka dwad dad"));
-          System.out.println( ejericicios.palindromo("TACOCAT"));
+        System.out.println( ejericicios.palindromo("wadhnawkjdka dwad dad"));
+        System.out.println( ejericicios.palindromo("TACOCAT"));
         //declaro un array de int´s de instancia
  /*si quisiese ponerlo dentro neceistaria lo siguiente:
             int[]  listaNumeros	={50,31,27,2,5,99};
